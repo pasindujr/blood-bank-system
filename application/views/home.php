@@ -8,16 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel='stylesheet'href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-    <!--Main CSS-->
-	<link rel='stylesheet'  href='application/views/styles/styles.css'>
     <!--fontawesome-->
     <script src='https://kit.fontawesome.com/332a215f17.js' crossorigin='anonymous'></script>
+    <!--Main CSS-->
+	<link rel="stylesheet" href="<?php echo base_url('assets/styles.css')?>"/>
     <!--google Fonts-->
     <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap' rel='stylesheet'>
     <!--Animate.css--->
     <link
     rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css'/>
+    
   </head>
   <body>
       <!---Navbar-->
@@ -31,13 +32,11 @@
         </button>
         <div class="collapse navbar-collapse"id="myNavbar">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#stories">
                     Stories
                 </a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Donation</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php base_url('index.php/StaffLogin'); ?>">Log In</a></li>
             </ul>
         </div>
       </div>
@@ -120,7 +119,7 @@
               <div class="row justify-content-center mb-5">
                   <div class="col-md-8 text-center heading-section">
                       <span>About Us</span>
-                      <h2 class="mb-3">Our Mission | Vision & Plans</h2>
+                      <h2 class="mb-3" id="about">Our Mission | Vision & Plans</h2>
                   </div>
               </div>
               <!------>
@@ -207,7 +206,7 @@
           <div class="stories">
               <div class="container">
                   <div class="section-title text-center">
-                      <h3>Stories</h3>
+                      <h3 id="stories">Stories</h3>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, totam hic id nesciunt quaerat veritatis.</p>
                   </div>
                   <!----->
@@ -247,347 +246,8 @@
           </div>
       </section>
  <!--- End of Stories Section-->
- <!---Projects Section-->
- <section class="project py-5">
-     <div class="container">
-         <div class="row my-3">
-             <div class="col-10 mx-auto text-center">
-                 <h1 class="text-uppercase">Our Latest Projects</h1>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, provident.</p>
-             </div>
-         </div>
-         <!----->
-         <div class="row">
-             <!--single Project-->
-             <div class="col-10 col-md-6 col-lg-4">
-                 <div class="project-container p-5 outline">
-                     <img src="Images/img-1.jpg"class="img-fluid grow"alt="">
-                     <a herf="#"class="donation text-capitalize">Donate Now</a>
-                 </div>
-                 <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                 <h6 class="text-center">
-                     Specification
-                 </h6>
-             </div>
-             <!--End of Single Project-->
-             <!--single Project-->
-             <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="Images/img-2.jpg"class="img-fluid grow"alt="">
-                    <a herf="#"class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Specification
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="Images/img-3.jpg"class="img-fluid grow"alt="">
-                    <a herf="#"class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Specification
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="Images/img-4.jpg"class="img-fluid grow"alt="">
-                    <a herf="#"class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Specification
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="Images/img-5.jpg"class="img-fluid grow"alt="">
-                    <a herf="#"class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Specification
-                </h6>
-            </div>
-            <!--End of Single Project-->
-            <!--single Project-->
-            <div class="col-10 col-md-6 col-lg-4">
-                <div class="project-container p-5 outline">
-                    <img src="Images/img-6.jpg"class="img-fluid grow"alt="">
-                    <a herf="#"class="donation text-capitalize">Donate Now</a>
-                </div>
-                <h4 class="text-capitalize text-center my-2">Project-1</h4>
-                <h6 class="text-center">
-                    Specification
-                </h6>
-            </div>
-            <!--End of Single Project-->
 
-         </div>
-     </div>
- </section>
-<!---End of the Projects Section-->
-
-<!-- Team Section-->
-<section class="team">
-    <div class="container">
-        <div class="section-title">
-            <h2 class="text-center">Our Team</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repellendus possimus id sapiente sunt ab mollitia cum. </p>
-        </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="Images/team.jpg"class="img-fluid"alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>John Doe</h4>
-                        <span>Specification</span>
-                        <div class="social">
-                            <a href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="Images/team.jpg"class="img-fluid"alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>John Doe</h4>
-                        <span>Specification</span>
-                        <div class="social">
-                            <a href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="Images/team.jpg"class="img-fluid"alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>John Doe</h4>
-                        <span>Specification</span>
-                        <div class="social">
-                            <a href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="team-1">
-                    <div class="pic">
-                        <img src="Images/team.jpg"class="img-fluid"alt="">
-                    </div>
-                    <div class="team-info">
-                        <h4>John Doe</h4>
-                        <span>Specification</span>
-                        <div class="social">
-                            <a href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!---->
-        </div>
-    </div>
-</section>
-<!---End of Team Section-->
-<!--Finished projects-->
-<section>
-    <div class="container">
-        <div class="text-center">
-            <h2 class="mb-5">Finished Projects</h2>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-lg-6">
-                <a class="project-item"href="">
-                    <span class="text">
-                        <span class="des">
-                            <h2>Lorem Ipusm</h2>
-                            <p class="mb-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sit.
-                            </p>
-                        </span>
-                    </span>
-                    <img src="Images/pro-1.jpg"class="img-fluid"alt="">
-                </a>
-            </div>
-            <!---->
-            <div class="col-lg-6">
-                <a class="project-item"href="">
-                    <span class="text">
-                        <span class="des">
-                            <h2>Lorem Ipusm</h2>
-                            <p class="mb-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sit.
-                            </p>
-                        </span>
-                    </span>
-                    <img src="Images/pro-2.jpg"class="img-fluid"alt="">
-                </a>
-            </div>
-            <!---->
-            <div class="col-lg-6">
-                <a class="project-item"href="">
-                    <span class="text">
-                        <span class="des">
-                            <h2>Lorem Ipusm</h2>
-                            <p class="mb-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sit.
-                            </p>
-                        </span>
-                    </span>
-                    <img src="Images/pro-3.jpg"class="img-fluid"alt="">
-                </a>
-            </div>
-            <!---->
-            <div class="col-lg-6">
-                <a class="project-item"href="">
-                    <span class="text">
-                        <span class="des">
-                            <h2>Lorem Ipusm</h2>
-                            <p class="mb-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sit.
-                            </p>
-                        </span>
-                    </span>
-                    <img src="Images/pro-4.jpg"class="img-fluid"alt="">
-                </a>
-            </div>
-            <!---->
-        </div>
-    </div>
-</section>
-<!---End of finished projects Section-->
-<!---Donation Section-->
-<section class="mt-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="text-center mb-55">
-                    <h3>Make a Donation</h3>
-                </div>
-            </div>
-        </div>
-        <!---->
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-            <form class="donation-form">
-               <div class="row align-items-center">
-                <div class="col-md-4">
-             <div class="amount">
-           <div class="input-field">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span></div>
-                             
-            <input type="text" class="form-control"placeholder="10,000"
-            aria-label="Username">
-                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!----->
-                        <div class="col-md-8">
-                         <div class="amount">
-                       <div class="need d-flex align-items-center
-                        justify-content-between">
-                        <div class="select">
-                            <h5>Select Amount</h5>
-                        </div>
-                        <div class="funds">
-                            <input type="radio"name="radio-group">
-                            <label for="fund-1">10</label>
-                        </div>
-                        <div class="funds">
-                            <input type="radio"name="radio-group">
-                            <label for="fund-2">50</label>
-                        </div>
-                        <div class="funds">
-                            <input type="radio"name="radio-group">
-                            <label for="Other">Other</label>
-                        </div>
-                    
-                    
-                    </div>
-                       
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-12">
-                <div class="donation-btn text-center">
-                    <a href=""class="btn btn-don">Donate Now</a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!---End of Donation section Section-->
+     
 <footer class="footer mt-5">
     <div class="footer-top">
         <div class="container">
@@ -707,32 +367,6 @@
         </div>
     </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
