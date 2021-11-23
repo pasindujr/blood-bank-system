@@ -16,7 +16,17 @@ class Validate_Donors extends CI_Controller {
                 }
                 else
                 {
-                        echo "Validation success";
+                        $this->load->model('Donor');
+                        $response = $this->Donor->registerUser();
+
+                        if($response) {
+                                $this->session->set_flashdata('msg','Donor Registered Successfully');
+                                redirect('Staff/registerDonor');
+                        } else {
+                                $this->session->set_flashdata('msg','Something went wrong');
+                                redirect('Staff/registerDonor');
+                        }
+
                         die();
                 }
     }

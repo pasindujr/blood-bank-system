@@ -8,6 +8,7 @@
     <title>Kegalle Blood Bank - Login</title>
 </head>
 <body>
+    
 <?php include_once 'navbars/navbar2.php' ?>
 
 <div class="columns">
@@ -18,6 +19,12 @@
 
     
         <h2 class="is-size-3 mb-3">Register Donor</h2>
+        <?php
+    if($this->session->flashdata('msg')) {
+        echo "<h3>".$this->session->flashdata('msg')."</h3>";
+    } 
+    
+    ?>
 
         <?php echo validation_errors(); ?>
         <?php echo form_open('Validate_Donors/register'); ?>
