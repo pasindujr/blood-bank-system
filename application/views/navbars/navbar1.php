@@ -1,30 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">BLOOD</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Help</a>
-        </li>
-        </ul>
-        <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link " href="<?php echo base_url('index.php/StaffLogin') ?>" role="button">
-            Login
-          </a>
-          
-        </li>
-        </ul>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="<?php echo base_url('index.php') ?>">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
 
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        About
+      </a>
+
+      <a class="navbar-item">
+        Contact
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light" href="<?php echo base_url('index.php/staff/login') ?>">
+            Log in
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
