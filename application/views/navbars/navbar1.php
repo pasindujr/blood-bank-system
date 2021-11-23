@@ -25,7 +25,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-light" href="<?php echo base_url('index.php/staff/login') ?>">
+          <a class="button is-light" href="<?php echo base_url('index.php/home/login') ?>">
             Log in
           </a>
         </div>

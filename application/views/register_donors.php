@@ -20,7 +20,7 @@
         <h2 class="is-size-3 mb-3">Register Donor</h2>
 
         <?php echo validation_errors(); ?>
-        <?php echo form_open('Donors/register'); ?>
+        <?php echo form_open('Validate_Donors/register'); ?>
         <div class="field">
         <label class="label">Donor Name</label>
         <div class="control">
@@ -38,7 +38,7 @@
         <div class="field">
         <label class="label">Date of birth</label>
         <div class="control">
-        <input class="input" type="date" placeholder="e.g. pasindu@gmail.com" name="donordob">
+        <input class="input" type="date" name="donordob">
         </div>
         </div>
 
@@ -59,7 +59,7 @@
         <div class="field">
         <label class="label">Mobile Number</label>
         <div class="control">
-        <input class="input" type="input" placeholder="0712345678" name="donormobile">
+        <input class="input" type="number" placeholder="0712345678" name="donormobile">
         </div>
         </div>
 
@@ -68,24 +68,28 @@
         <div class="field has-addons is-grouped">
         <div class="control is-expanded">
         <div class="select is-fullwidth">
-        <select name="country" name="bloodtype">
-            <option value="O-">O-</option>
-            <option value="O+">O+</option>
-            <option value="A-">A-</option>
-            <option value="A+">A+</option>
-            <option value="B-">B-</option>
-            <option value="B+">B+</option>
-            <option value="AB-">AB-</option>
-            <option value="AB+">AB+</option>
-        </select>
+        <?php  $bloodtypes = array(
+                  ''  => '',
+                  'O-'  => 'O-',
+                  'O+'    => 'O+',
+                  'A-'   => 'A-',
+                  'A+' => 'A+',
+                  'B-' => 'B-',
+                  'B+' => 'B+',
+                  'AB-' => 'AB-',
+                  'AB+' => 'AB+',
+                );
+    echo form_dropdown('bloodtypes', $bloodtypes, '', 'required="required"');
+     ?>
+       
+        </div>
         </div>
         </div>
         </div>
 
+       
 
-        </div>
-
-        <div class="control">
+        <div class="control ">
         <button type="submit" class="button is-primary">Submit</button>
         </div>
         
