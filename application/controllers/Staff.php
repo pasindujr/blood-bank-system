@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Staff extends CI_Controller {
+
+	public function index()
+	{
+		$this->load->view('stafflogin');
+	}
+
 	public function login()
 	{
 		$this->load->view('stafflogin');
