@@ -18,6 +18,14 @@
   <div class="column is-half">
   <h2 class="is-size-3">Admin Login</h2>
 
+
+ <?php
+    if($this->session->flashdata('erroradmin')) {
+        echo "<h3>".$this->session->flashdata('erroradmin')."</h3>";
+    }   
+    ?>
+ 
+
 <hr>
 
 <?php echo validation_errors(); ?>

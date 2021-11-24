@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="<?php echo base_url('index.php') ?>">
     <img src="<?php echo base_url('assests/img/blood.png'); ?>" width="40" height="20" alt=""/>
@@ -24,9 +24,12 @@
     </div>
 
     <div class="navbar-end">
+    <p class="navbar-item">
+        Welcome <?php echo $_SESSION['adminUserName'] ?>
+    </p>
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
+          <a class="button is-primary" href="<?php echo base_url('index.php/Admin/adminLogout'); ?>">
             <strong>Log Out</strong>
           </a>
         </div>

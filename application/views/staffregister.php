@@ -10,6 +10,11 @@
 <body>
     
 <?php include_once 'navbars/adminnavbar.php' ?>
+<?php
+    if(!($this->session->userdata('isLoggedIn'))) {
+        redirect('admin/index');
+    }
+?>
 
 <div class="columns">
 <div class="column"></div>
