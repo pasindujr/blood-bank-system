@@ -1,8 +1,8 @@
 <?php
 
-class Donor extends CI_Model {
+class Donor_Model extends CI_Model {
 
-    function registerUser() {
+    function registerDonor() {
 
         $data = array(
 
