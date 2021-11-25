@@ -37,5 +37,38 @@ class Login extends CI_Controller {
 
 	}
 
+        public function staffLogin() {
+
+                $this->form_validation->set_rules('staffusername', 'Staff Username', 'required');
+                $this->form_validation->set_rules('staffpassword', 'Staff Password', 'required');
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('stafflogin.php');
+                }
+                else
+                {
+                        $this->load->model('Login_Model');
+                        $response = $this->Login_Model->loginStaff();
+
+                        if($response != false) {
+
+                                $staffData = array (
+                                        'staffUserName' => $response->StaffUserName,
+                                        'isLoggedIn' => True
+                                );
+                                
+                                $this->session->set_userdata($staffData);
+                                redirect('staff/registerDonor');
+
+                        } else {
+                                $this->session->set_flashdata('errorstaff','<div class="alert alert-danger" role="alert">
+                                Wrong Credentials!
+                              </div>');
+                                redirect('home/login');
+                        }
+                        
+                }
+        }
     
 }

@@ -9,4 +9,12 @@ class Staff extends CI_Controller {
 	{
 		$this->load->view('register_donors');
 	}
+
+	public function staffLogout() {
+        $this->session->unset_userdata('staffUserName');
+        $this->session->unset_userdata('isLoggedIn');
+        redirect('home/login');
+        $this->session->unset_flashdata('errorstaff');
+
+    }
 }

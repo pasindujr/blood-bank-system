@@ -10,61 +10,36 @@
 <body>
 <?php include_once 'navbars/navbar1.php' ?>
     
-<div class="columns">
-<div class="column"></div>
 
-
-  <div class="column is-half">
+  <div class="container">
+  <hr>
   <h2 class="is-size-3">Admin Login</h2>
-
 
  <?php
     if($this->session->flashdata('erroradmin')) {
         echo "<h3>".$this->session->flashdata('erroradmin')."</h3>";
     }   
     ?>
- 
 
 <hr>
 
 <?php echo validation_errors(); ?>
 <?php echo form_open('Login/adminLogin'); ?>
 
-<div class="field">
-<p class="control has-icons-left has-icons-right">
-<input class="input" type="text" placeholder="Username" name="adminusername">
-<span class="icon is-small is-left">
-  <i class="fas fa-user"></i>
-</span>
-</p>
-</div>
-<div class="field">
-<p class="control has-icons-left">
-<input class="input" type="password" placeholder="Password" name="adminpassword">
-<span class="icon is-small is-left">
-  <i class="fas fa-lock"></i>
-</span>
-</p>
-</div>
-<div class="field">
-<p class="control">
-<button class="button is-success" type="submit">
-  Login
-</button>
-</p>
-</div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Admin user name</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="eg - pasindur" name="adminusername">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="adminpassword">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+
+
 <?php echo form_close(); ?>
   </div>
-
-  
-
-  <div class="column"></div>
-
-
-
-    
-
-
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

@@ -10,7 +10,12 @@
 <body>
     
 <?php include_once 'navbars/navbar2.php' ?>
-    
+<?php
+    if(!($this->session->userdata('isLoggedIn'))) {
+        redirect('home/login');
+    }
+?>  
+
 <div class="container">
         <h2 class="is-size-3 mb-3">Register Donor</h2>
         <?php
