@@ -19,8 +19,10 @@
     } 
     
     ?>
-
+        <div class="alert alert-danger" role="alert">
         <?php echo validation_errors(); ?>
+</div>
+        
         <?php echo form_open('Validate_Donors/register'); ?>
         <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Donor Name</label>

@@ -20,63 +20,43 @@
 <hr>
 <h2 class="is-size-3 mb-3">Register Staff</h2>
 <hr>
-<?php echo validation_errors(); ?>
-        <?php echo form_open('Validate_Donors/register'); ?>
+<?php
+    if($this->session->flashdata('stafferror')) {
+        echo "<h3>".$this->session->flashdata('stafferror')."</h3><hr>";
+    } 
+    
+    ?>
+
+<div class="alert alert-danger" role="alert">
+        <?php echo validation_errors(); ?>
+</div>
+
+        <?php echo form_open('Validate_Staff/register'); ?>
         <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Staff Name</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - Pasindu Ruwandeniya" name="donorname">
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - Pasindu Ruwandeniya" name="staffname">
       </div>
 
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Gender</label>
-
-        <?php  $donorgender = array(
-                  ''  => 'Select',
-                  'Male'  => 'Male',
-                  'Female'    => 'Female',
-                );
-    echo form_dropdown('donorgender', $donorgender, '', 'required="required"');
-     ?>
-
-      <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Donor NIC</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - 965438764V" name="donornic">
+      <label for="exampleFormControlInput1" class="form-label">Staff Username</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - pasindur" name="staffusername">
       </div>
 
       <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Date of birth</label>
-      <input type="date" class="form-control" id="exampleFormControlInput1" name="donordob">
+      <label for="exampleFormControlInput1" class="form-label">Staff Password</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="staffpassword" placeholder="Please enter a strong password">
       </div>
 
         
       <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Weight</label>
-      <input type="number" class="form-control" id="exampleFormControlInput1" name="donorweight" placeholder="65KG">
+      <label for="exampleFormControlInput1" class="form-label">Staff Designation</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="staffdesignation" placeholder="eg - Nurse">
       </div>
 
       <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
-      <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0712345678" name="donormobile">
-      </div>
-
-        <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Blood Type</label>
-
-        <?php  $bloodtypes = array(
-                  ''  => 'Select',
-                  'O-'  => 'O-',
-                  'O+'    => 'O+',
-                  'A-'   => 'A-',
-                  'A+' => 'A+',
-                  'B-' => 'B-',
-                  'B+' => 'B+',
-                  'AB-' => 'AB-',
-                  'AB+' => 'AB+',
-                );
-    echo form_dropdown('bloodtypes', $bloodtypes, '', 'required="required"');
-     ?>
-
-       
+      <label for="exampleFormControlInput1" class="form-label">Staff NIC</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - 945345432V" name="staffnic">
+      </div>       
 
         <div class="control ">
         <button type="submit" class="btn btn-primary">Submit</button>
