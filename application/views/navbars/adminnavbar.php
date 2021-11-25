@@ -1,39 +1,30 @@
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="<?php echo base_url('index.php') ?>">
-    <img src="<?php echo base_url('assests/img/blood.png'); ?>" width="40" height="20" alt=""/>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="<?php echo base_url('index.php') ?>">
+      <img src="<?php echo base_url('assests/img/blood.png'); ?>" alt="" width="30" height="24">
     </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="<?php echo base_url('index.php/admin/home') ?>">
-        Register Staff
-      </a>
-
-      <a class="navbar-item">
-        View Staff
-      </a>
-
-    </div>
-
-    <div class="navbar-end">
-    <p class="navbar-item">
-        Welcome <?php echo $_SESSION['adminUserName'] ?>
-    </p>
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" href="<?php echo base_url('index.php/Admin/adminLogout'); ?>">
-            <strong>Log Out</strong>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php/admin/home') ?>">Register Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">View Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-current="page" href="#">Welcome <?php echo $_SESSION['adminUserName'] ?></a>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <a class="btn btn-outline-success" href="<?php echo base_url('index.php/Admin/adminLogout'); ?>">
+            Log Out
           </a>
-        </div>
-      </div>
+      </form>
+      
     </div>
   </div>
 </nav>
