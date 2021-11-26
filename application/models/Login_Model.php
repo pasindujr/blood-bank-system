@@ -1,8 +1,10 @@
 <?php
 
-class Login_Model extends CI_Model {
+class Login_Model extends CI_Model
+{
 
-    function loginAdmin() {
+    function loginAdmin()
+    {
 
         $adminUserName = $this->input->post('adminusername');
         $adminPassword = $this->input->post('adminpassword');
@@ -11,17 +13,18 @@ class Login_Model extends CI_Model {
         $this->db->where('AdminPassword', $adminPassword);
         $response = $this->db->get('admins');
 
-        if($response->num_rows() == 1) {
+        if ($response->num_rows() == 1) {
             return $response->row(0);
 
         } else {
-            
+
             return false;
         }
-        
+
     }
 
-    function loginStaff() {
+    function loginStaff()
+    {
         $staffUserName = $this->input->post('staffusername');
         $staffPassword = sha1($this->input->post('staffpassword'));
 
@@ -29,11 +32,11 @@ class Login_Model extends CI_Model {
         $this->db->where('StaffPassword', $staffPassword);
         $response = $this->db->get('staff');
 
-        if($response->num_rows() == 1) {
+        if ($response->num_rows() == 1) {
             return $response->row(0);
 
         } else {
-            
+
             return false;
         }
     }

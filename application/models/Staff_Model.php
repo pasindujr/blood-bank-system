@@ -1,8 +1,10 @@
 <?php
 
-class Staff_Model extends CI_Model {
+class Staff_Model extends CI_Model
+{
 
-    function registerStaff() {
+    function registerStaff()
+    {
 
         $data = array(
 

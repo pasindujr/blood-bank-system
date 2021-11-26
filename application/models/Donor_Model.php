@@ -1,8 +1,10 @@
 <?php
 
-class Donor_Model extends CI_Model {
+class Donor_Model extends CI_Model
+{
 
-    function registerDonor() {
+    function registerDonor()
+    {
 
         $data = array(
 
