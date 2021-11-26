@@ -20,9 +20,7 @@ class Validate_Donors extends CI_Controller {
                         $response = $this->Donor_Model->registerDonor();
 
                         if($response) {
-                                $this->session->set_flashdata('msg','<div class="alert alert-success" role="alert">
-                                Donor registered successfully!
-                              </div>');
+                                $this->session->set_flashdata('msg','Donor registered successfully!');
                                 redirect('Staff/registerDonor');
                         } else {
                                 $this->session->set_flashdata('msg','Something went wrong');

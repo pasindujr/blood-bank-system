@@ -20,14 +20,10 @@ class Validate_Staff extends CI_Controller {
                         $response = $this->Staff_Model->registerStaff();
 
                         if($response) {
-                                $this->session->set_flashdata('stafferror','<div class="alert alert-success" role="alert">
-                                Staff Registered Successfully!
-                              </div>');
+                                $this->session->set_flashdata('staffsuccess','Staff registered successfully!');
                                 redirect('admin/home');
                         } else {
-                                $this->session->set_flashdata('stafferror','<div class="alert alert-danger" role="alert">
-                                Something went wrong.
-                              </div>');
+                                $this->session->set_flashdata('staffsuccess','Something went wrong');
                                 redirect('admin/home');
                         }
 

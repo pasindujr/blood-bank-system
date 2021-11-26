@@ -62,9 +62,8 @@ class Login extends CI_Controller {
                                 redirect('staff/registerDonor');
 
                         } else {
-                                $this->session->set_flashdata('errorstaff','<div class="alert alert-danger" role="alert">
-                                Wrong Credentials!
-                              </div>');
+
+                               $this->session->set_flashdata('errorstaff','Wrong credentials!');
                                 redirect('home/login');
                         }
                         
