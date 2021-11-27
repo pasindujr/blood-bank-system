@@ -23,9 +23,12 @@ if (!($this->session->userdata('isLoggedIn'))) {
     <h2 class="is-size-3 mb-3">Register Staff</h2>
     <hr>
 
-    <div class="alert alert-danger" role="alert">
-        <?php echo validation_errors(); ?>
-    </div>
+    <?php
+    if (validation_errors()) { ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo validation_errors(); ?>
+        </div>
+    <?php } ?>
 
     <?php echo form_open('Validate_Staff/register'); ?>
     <div class="mb-3">

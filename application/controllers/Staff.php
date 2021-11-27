@@ -18,4 +18,12 @@ class Staff extends CI_Controller
         $this->session->unset_flashdata('errorstaff');
 
     }
+
+    public function viewDonors()
+    {
+
+        $this->load->Model('Donor_Model');
+        $data['donors'] = $this->Donor_Model->viewDonors();
+        $this->load->view('viewdonors',$data);
+    }
 }

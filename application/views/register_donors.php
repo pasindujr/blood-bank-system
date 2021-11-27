@@ -21,9 +21,12 @@ if (!($this->session->userdata('isLoggedIn'))) {
 <div class="container">
     <h2 class="is-size-3 mb-3">Register Donor</h2>
 
-    <div class="alert alert-danger" role="alert">
-        <?php echo validation_errors(); ?>
-    </div>
+    <?php
+    if (validation_errors()) { ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo validation_errors(); ?>
+        </div>
+    <?php } ?>
 
     <?php echo form_open('Validate_Donors/register'); ?>
     <div class="mb-3">

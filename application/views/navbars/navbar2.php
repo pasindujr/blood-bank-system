@@ -14,10 +14,7 @@
                        href="<?php echo base_url('index.php/staff/registerdonor') ?>">Register Donors</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Edit Donors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">View Donors</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php/staff/viewdonors') ?>">View Donors</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
