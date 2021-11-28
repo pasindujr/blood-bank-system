@@ -24,4 +24,15 @@ class Staff_Model extends CI_Model
     {
         return $this->db->get('staff');
     }
+
+    function editStaff($staff)
+    {
+        $query = $this->db->get_where('staff', array('StaffUserName' => $staff));
+        return $query->row();
+    }
+
+    function updateStaff($data, $staff)
+    {
+        return $this->db->update('staff', $data, ['StaffUserName' => $staff]);
+    }
 }
