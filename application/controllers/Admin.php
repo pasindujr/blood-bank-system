@@ -13,6 +13,13 @@ class Admin extends CI_Controller
         $this->load->view('staffregister');
     }
 
+    public function viewStaff()
+    {
+        $this->load->Model('Staff_Model');
+        $data['staff'] = $this->Staff_Model->viewStaff();
+        $this->load->view('viewstaff', $data);
+    }
+
     public function adminLogout()
     {
         $this->session->unset_userdata('adminUserName');

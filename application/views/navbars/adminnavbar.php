@@ -14,7 +14,8 @@
                        href="<?php echo base_url('index.php/admin/home') ?>">Register Staff</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">View Staff</a>
+                    <a class="nav-link active" aria-current="page"
+                       href="<?php echo base_url('index.php/admin/viewstaff') ?>">View Staff</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-current="page"

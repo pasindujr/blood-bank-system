@@ -19,4 +19,9 @@ class Staff_Model extends CI_Model
         return $this->db->insert('staff', $data);
         die();
     }
+
+    function viewStaff()
+    {
+        return $this->db->get('staff');
+    }
 }
