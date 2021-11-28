@@ -30,4 +30,15 @@ class Donor_Model extends CI_Model
     {
         return $this->db->get('donors');
     }
+
+    function editDonors($donor)
+    {
+        $query = $this->db->get_where('donors', array('DonorNIC' => $donor));
+        return $query->row();
+    }
+
+    function updateDonor($data, $donor)
+    {
+        return $this->db->update('donors', $data, ['DonorNIC' => $donor]);
+    }
 }
