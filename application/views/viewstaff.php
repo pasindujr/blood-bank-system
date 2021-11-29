@@ -31,6 +31,7 @@ if (!($this->session->userdata('isLoggedIn'))) {
             <th scope="col">Staff Designation</th>
             <th scope="col">Staff NIC</th>
             <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -49,6 +50,8 @@ if (!($this->session->userdata('isLoggedIn'))) {
                     <td><?php echo $row->StaffNIC; ?></td>
                     <td><a href="<?php echo base_url('index.php/admin/editstaff/' . $row->StaffUserName) ?>"
                            class="btn btn-success btn-sm">Edit</a></td>
+                    <td><a href="<?php echo base_url('index.php/admin/deletestaff/' . $row->StaffUserName) ?>"
+                           class="btn btn-danger btn-sm">Delete</a></td>
                 </tr>
                 <?php
             }

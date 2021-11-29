@@ -54,6 +54,13 @@ class Admin extends CI_Controller
 
     }
 
+    public function deleteStaff($staff)
+    {
+        $this->load->model('Staff_Model');
+        $this->Staff_Model->deleteStaff($staff);
+        redirect(base_url('index.php/admin/viewstaff'));
+    }
+
     public function adminLogout()
     {
         $this->session->unset_userdata('adminUserName');

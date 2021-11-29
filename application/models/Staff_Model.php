@@ -35,4 +35,9 @@ class Staff_Model extends CI_Model
     {
         return $this->db->update('staff', $data, ['StaffUserName' => $staff]);
     }
+
+    function deleteStaff($staff)
+    {
+        return $this->db->delete('staff', ['StaffUserName' => $staff]);
+    }
 }
