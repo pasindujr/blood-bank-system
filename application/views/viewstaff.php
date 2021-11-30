@@ -50,8 +50,8 @@ if (!($this->session->userdata('isLoggedIn'))) {
                     <td><?php echo $row->StaffNIC; ?></td>
                     <td><a href="<?php echo base_url('index.php/admin/editstaff/' . $row->StaffUserName) ?>"
                            class="btn btn-success btn-sm">Edit</a></td>
-                    <td><a href="<?php echo base_url('index.php/admin/deletestaff/' . $row->StaffUserName) ?>"
-                           class="btn btn-danger btn-sm">Delete</a></td>
+                    <td><a id="mylink" href="javascript:;" class="btn btn-danger btn-sm"
+                           onclick="return confirm('<?php echo $row->StaffUserName; ?>');">Delete</a></td>
                 </tr>
                 <?php
             }
@@ -66,11 +66,30 @@ if (!($this->session->userdata('isLoggedIn'))) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php if ($this->session->flashdata('staffupdated')) { ?>
     <script>
         alertify.set('notifier', 'position', 'top-right');
         alertify.success("<?php echo $this->session->flashdata('staffupdated'); ?>")
     </script>
-
 <?php } ?>
+
+<script>
+    function confirm(StaffUserName) {
+        Swal.fire({
+            title: 'Do you want to delete this staff member?',
+            showDenyButton: true,
+            confirmButtonText: 'Delete',
+            denyButtonText: `Don't Delete`,
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                window.location.href = "<?php echo base_url('index.php/admin/deletestaff/')?>" + StaffUserName;
+                Swal.fire('Staff Deleted!', '', 'success')
+            } else if (result.isDenied) {
+                Swal.fire('Staff not deleted', '', 'info')
+            }
+        });
+    }
+</script>
 </html>
