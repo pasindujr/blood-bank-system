@@ -21,7 +21,7 @@ class Login extends CI_Controller
 
                 $adminData = array(
                     'adminUserName' => $response->AdminUserName,
-                    'isLoggedIn' => True
+                    'isAdminLoggedIn' => True
                 );
 
                 $this->session->set_userdata($adminData);
@@ -52,7 +52,7 @@ class Login extends CI_Controller
 
                 $staffData = array(
                     'staffUserName' => $response->StaffUserName,
-                    'isLoggedIn' => True
+                    'isStaffLoggedIn' => True
                 );
 
                 $this->session->set_userdata($staffData);

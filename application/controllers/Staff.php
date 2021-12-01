@@ -13,7 +13,7 @@ class Staff extends CI_Controller
     public function staffLogout()
     {
         $this->session->unset_userdata('staffUserName');
-        $this->session->unset_userdata('isLoggedIn');
+        $this->session->unset_userdata('isStaffLoggedIn');
         redirect('home/login');
         $this->session->unset_flashdata('errorstaff');
 

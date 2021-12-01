@@ -64,7 +64,7 @@ class Admin extends CI_Controller
     public function adminLogout()
     {
         $this->session->unset_userdata('adminUserName');
-        $this->session->unset_userdata('isLoggedIn');
+        $this->session->unset_userdata('isAdminLoggedIn');
         redirect('admin/index');
         $this->session->unset_flashdata('erroradmin');
 

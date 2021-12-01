@@ -13,7 +13,7 @@
 
 <?php include_once 'navbars/adminnavbar.php' ?>
 <?php
-if (!($this->session->userdata('isLoggedIn'))) {
+if (!($this->session->userdata('isAdminLoggedIn'))) {
     redirect('admin/index');
 }
 ?>

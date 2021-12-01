@@ -13,7 +13,7 @@
 
 <?php include_once 'navbars/navbar2.php' ?>
 <?php
-if (!($this->session->userdata('isLoggedIn'))) {
+if (!($this->session->userdata('isStaffLoggedIn'))) {
     redirect('home/login');
 }
 ?>
