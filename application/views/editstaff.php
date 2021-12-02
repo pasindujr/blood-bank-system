@@ -31,18 +31,19 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
     <?php } ?>
 
     <?php echo form_open('admin/updatestaff/' . $staff->StaffUserName); ?>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Staff Username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - pasindur"
+               name="staffusername" value="<?php echo $staff->StaffUserName ?>" readonly>
+    </div>
+
+
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Staff Name</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - Pasindu Ruwandeniya"
                name="staffname" value="<?php echo $staff->StaffName ?>">
     </div>
-
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Staff Username</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - pasindur"
-               name="staffusername" value="<?php echo $staff->StaffUserName ?>">
-    </div>
-
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Staff Designation</label>
