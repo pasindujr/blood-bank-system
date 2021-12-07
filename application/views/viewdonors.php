@@ -37,6 +37,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
             <th scope="col">Donor Mobile</th>
             <th scope="col">Donor Blood Type</th>
             <th scope="col">Edit</th>
+            <th scope="col">Donate</th>
         </tr>
         </thead>
         <tbody>
@@ -60,6 +61,10 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
                     <td>
                         <a href="<?php echo base_url('index.php/staff/editdonors/' . $row->DonorNIC) ?>"
                            class="btn btn-success btn-sm">Edit</a>
+                    </td>
+                    <td>
+                        <a href="<?php echo base_url('index.php/staff/donate/' . $row->DonorID) ?>"
+                           class="btn btn-info btn-sm">Donate</a>
                     </td>
                 </tr>
                 <?php

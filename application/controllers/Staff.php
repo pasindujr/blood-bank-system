@@ -66,4 +66,34 @@ class Staff extends CI_Controller
 
 
     }
+
+    public function donate($donor) {
+        $this->load->model('Donor_Model');
+        $data['donor'] = $this->Donor_Model->donate($donor);
+        $this->load->view('packetregister', $data);
+    }
+
+    public function savePacket($packet) {
+        $donatedDate = $this->input->post('packetdonateddate');
+        $expiringDate = date('Y-m-d', strtotime($donatedDate. ' + 42 days'));
+
+        $this->form_validation->set_rules('packetdonateddate', 'Donated Date', 'required');
+
+        if ($this->form_validation->run()) {
+            $data = [
+                'DonorID' => $this->input->post('donorid'),
+                'DonatedDate' => $this->input->post('packetdonateddate'),
+                'ExpiringDate' => $expiringDate,
+                'BloodType' => $this->input->post('bloodtype'),
+                'isAvailable' => True,
+                'comments' => $this->input->post('comments'),
+            ];
+            $this->load->model('Donor_Model');
+            $data['donor'] = $this->Donor_Model->savePacket($data);
+            $this->session->set_flashdata('packetsaved', 'Donation successful!');
+            redirect(base_url('index.php/staff/donate/'). $packet);
+        } else {
+            $this->donate($packet);
+        }
+    }
 }

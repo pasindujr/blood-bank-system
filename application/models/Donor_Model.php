@@ -41,4 +41,14 @@ class Donor_Model extends CI_Model
     {
         return $this->db->update('donors', $data, ['DonorNIC' => $donor]);
     }
+
+    function donate($donor) {
+        $query = $this->db->get_where('donors', array('DonorID' => $donor));
+        return $query->row();
+    }
+
+    function savePacket($data)
+    {
+        return $this->db->insert('packets', $data);
+    }
 }
