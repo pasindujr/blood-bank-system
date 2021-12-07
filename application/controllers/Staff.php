@@ -67,15 +67,17 @@ class Staff extends CI_Controller
 
     }
 
-    public function donate($donor) {
+    public function donate($donor)
+    {
         $this->load->model('Donor_Model');
         $data['donor'] = $this->Donor_Model->donate($donor);
         $this->load->view('packetregister', $data);
     }
 
-    public function savePacket($packet) {
+    public function savePacket($packet)
+    {
         $donatedDate = $this->input->post('packetdonateddate');
-        $expiringDate = date('Y-m-d', strtotime($donatedDate. ' + 42 days'));
+        $expiringDate = date('Y-m-d', strtotime($donatedDate . ' + 42 days'));
 
         $this->form_validation->set_rules('packetdonateddate', 'Donated Date', 'required');
 
@@ -91,9 +93,17 @@ class Staff extends CI_Controller
             $this->load->model('Donor_Model');
             $data['donor'] = $this->Donor_Model->savePacket($data);
             $this->session->set_flashdata('packetsaved', 'Donation successful!');
-            redirect(base_url('index.php/staff/donate/'). $packet);
+            redirect(base_url('index.php/staff/donate/') . $packet);
         } else {
             $this->donate($packet);
         }
+    }
+
+    public function viewPackets()
+    {
+
+        $this->load->Model('Donor_Model');
+        $data['packets'] = $this->Donor_Model->viewPackets();
+        $this->load->view('viewpackets', $data);
     }
 }

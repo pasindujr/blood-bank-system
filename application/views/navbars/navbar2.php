@@ -14,7 +14,12 @@
                        href="<?php echo base_url('index.php/staff/registerdonor') ?>">Register Donors</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php/staff/viewdonors') ?>">View Donors</a>
+                    <a class="nav-link active" aria-current="page"
+                       href="<?php echo base_url('index.php/staff/viewdonors') ?>">View Donors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="<?php echo base_url('index.php/staff/viewpackets') ?>">View Donations</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -26,7 +31,7 @@
                         <li><a class="dropdown-item" href="<?php echo base_url('index.php/staff/stafflogout'); ?>">Log
                                 Out</a></li>
                     </ul>
-                    </li>
+                </li>
         </div>
     </div>
 </nav>
