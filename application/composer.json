@@ -1,0 +1,18 @@
+{
+    "name": "pasindu/blood-bank-system",
+    "description": "System for a local blood bank.",
+    "autoload": {
+        "psr-4": {
+            "Pasindu\\BloodBankSystem\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pasindu Ruwandeniya",
+            "email": "pasindujayanada@gmail.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^6.31"
+    }
+}
