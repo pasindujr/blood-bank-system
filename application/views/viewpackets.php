@@ -57,7 +57,9 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
                         } ?></td>
                     <td><?php echo $row->comments; ?></td>
                     <td>
-                        <a href="" class="btn btn-info btn-sm">Action</a>
+                        <?php if ($row->isAvailable) {
+                            echo '<a href="" class="btn btn-info btn-sm">Action</a>';
+                        } ?>
                     </td>
                 </tr>
                 <?php
