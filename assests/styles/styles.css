@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-nav li a {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/*----Banner section----*/
+
+#banner {
+    background-image: linear-gradient(to right, #A3333D, #F64740);
+    color: #fff;
+    padding-top: 5%;
+}
+
+.promo-header {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.play-btn {
+    width: 45px;
+    margin: 20px;
+}
+
+#banner a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom-img {
+    width: 100%;
+}
