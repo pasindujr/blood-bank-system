@@ -28,6 +28,36 @@
     <img src="<?php echo base_url('assests/img/wave1.png'); ?>" class="bottom-img">
 </section>
 
+<!--Why give blood-->
+<section id="facts">
+    <div class="container text-center">
+        <h1 class="title">WHY GIVE BLOOD?</h1>
+        <div class="row text-center">
+            <div class="col-md-3 facts">
+                <img src="<?php echo base_url('assests/img/fact1.png'); ?>" class="facts-img">
+                <h4>100</h4>
+                <p>100% of Sri Lankan blood donors are voluntary non remunerated donors.</p>
+            </div>
+            <div class="col-md-3 facts">
+                <img src="<?php echo base_url('assests/img/fact2.png'); ?>" class="facts-img">
+                <h4>3</h4>
+                <p>Your precious donation of blood can save as many as 3 lives.</p>
+            </div>
+            <div class="col-md-3 facts">
+                <img src="<?php echo base_url('assests/img/fact3.png'); ?>" class="facts-img">
+                <h4>4</h4>
+                <p>You can donate blood in every 4 months time.</p>
+            </div>
+            <div class="col-md-3 facts">
+                <img src="<?php echo base_url('assests/img/fact4.png'); ?>" class="facts-img">
+                <h4>14th JUNE</h4>
+                <p>World Blood Donor Day.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <?php include_once 'footer/footer.php' ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
