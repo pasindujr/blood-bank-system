@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <title>Kegalle Blood Bank - View Donors</title>
 </head>
-<body>
+<body style="margin-bottom: 50px">
 <?php include_once 'navbars/adminnavbar.php' ?>
 
 <?php
@@ -62,6 +62,7 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
     </table>
 </div>
 
+<?php include_once 'footer/footer.php' ?>
 </body>
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
