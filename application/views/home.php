@@ -57,11 +57,63 @@
     </div>
 </section>
 
+<!--Who can give blood-->
+<section id="who-can-give-blood">
+    <div class="container">
+        <h1 class="title text-center">WHO CAN GIVE BLOOD?</h1>
+        <div class="row">
+            <div class="col-md-6 who-can-give-blood">
+                <p class="give-blood-title">Who can donate blood?</p>
+                <ul>
+                    <li>The person must fulfill several criteria to be accepted as a blood donor. These criteria are set
+                        forth to ensure the safety of the donor as well as the quality of donated blood.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 who-can-give-blood">
+                <p class="give-blood-title">Donor Selection Criteria</p>
+                <ul>
+                    <li>Age above 18 years and below 60 years.</li>
+                    <li>If previously donated, at least 4 months should be elapsed since the date of previous
+                        donation.
+                    </li>
+                    <li>Hemoglobin level should be more than 12g/dL. (this blood test is done prior to each blood
+                        donation)
+                    </li>
+                    <li>Free from any serious disease condition or pregnancy.</li>
+                    <li>Should have a valid identity card or any other document to prove the identity.</li>
+                    <li>Free from "Risk Behaviours".</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 who-can-give-blood">
+                <p class="give-blood-title">Risk Behaviours</p>
+                <ul>
+                    <li>Homosexuals.</li>
+                    <li>Sex workers and their clients.</li>
+                    <li>Drug addicts.</li>
+                    <li>Engaging in sex with any of the above.</li>
+                    <li>Having more than one sexual partner</li>
+                </ul>
+            </div>
+            <div class="col-md-6 who-can-give-blood">
+                <p class="give-blood-title">Type of Donors</p>
+                <ul>
+                    <li>Voluntory non remunerated donors. (donate for the sake of others and do not expect any benefit.
+                        their blood is considered safe and healthy)
+                    </li>
+                    <li>Replacement donors. (donate to replace the units used for their friends or family members)</li>
+                    <li>Paid donors. (receive payment for donation</li>
+                    <li>Directed donors. (donate only for a specific patient's requirement)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php include_once 'footer/footer.php' ?>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>
 

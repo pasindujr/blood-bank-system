@@ -89,3 +89,25 @@ body {
     display: block;
     transform: translateY(8px);
 }
+
+/*----Who can give blood section----*/
+
+#who-can-give-blood {
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.give-blood-title {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 8%;
+}
+
+#who-can-give-blood ul li {
+    margin: 10px 0;
+}
+
+#who-can-give-blood ul {
+    margin-left: 20px;
+}
