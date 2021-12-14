@@ -66,7 +66,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0712345678"
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="712345678 | Please don't use 0 at the beginning"
                    name="donormobile">
         </div>
 

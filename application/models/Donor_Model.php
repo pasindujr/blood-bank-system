@@ -57,4 +57,12 @@ class Donor_Model extends CI_Model
     {
         return $this->db->get('packets');
     }
+
+    function changeStatus($packet)
+    {
+        $data = array(
+            'isAvailable' => False,
+        );
+        return $this->db->update('packets', $data, ['PacketID' => $packet]);
+    }
 }

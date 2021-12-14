@@ -106,4 +106,47 @@ class Staff extends CI_Controller
         $data['packets'] = $this->Donor_Model->viewPackets();
         $this->load->view('viewpackets', $data);
     }
+
+    public function markAsUsed($packet)
+    {
+
+        try {
+
+            $packetData = $this->db->get_where('packets', array('PacketID' => $packet));
+
+            foreach ($packetData->result() as $row) {
+                $donorID = $row->DonorID;
+                $packetDonatedDate = $row->DonatedDate;
+            }
+
+            $donorData = $this->db->get_where('donors', array('DonorID' => $donorID));
+
+            foreach ($donorData->result() as $row) {
+                $donarName = $row->DonorName;
+                $donorMobile = $row->DonorMobile;
+            }
+
+            $sid = '';
+            $token = '';
+            $donorMobile = '+94' . $donorMobile;
+            $twilioNumber = '';
+
+            $client = new Twilio\Rest\Client($sid, $token);
+            $message = $client->messages->create(
+                $donorMobile, array(
+                    'from' => $twilioNumber,
+                    'body' => 'Thank you ' . $donarName . ' for your blood donation. Your donation which donated in ' . $packetDonatedDate . ', has just saved a life.'
+                )
+            );
+
+            if ($message->sid) {
+                $this->load->Model('Donor_Model');
+                $this->Donor_Model->changeStatus($packet);
+                redirect('staff/viewpackets');
+            }
+        } catch (Exception $e) {
+            redirect('staff/viewpackets');
+            $this->session->set_flashdata('donationerror', 'Something went wrong!');
+        }
+    }
 }
