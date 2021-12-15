@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php') ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Why give blood</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php#facts') ?>"">Why give blood</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Who can give blood</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php#who-can-give-blood') ?>">Who can give blood</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">The donation process</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('index.php#donation-process') ?>">The donation process</a>
                 </li>
 
             </ul>
