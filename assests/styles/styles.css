@@ -111,3 +111,23 @@ body {
 #who-can-give-blood ul {
     margin-left: 20px;
 }
+
+/*----Donation process----*/
+
+#donation-process {
+    margin: 50px 0;
+}
+
+.donation-process-title {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 2%;
+}
+
+.donation-process ul li {
+    margin: 10px 0;
+}
+
+.donation-process ul {
+    margin-left: 20px;
+}
