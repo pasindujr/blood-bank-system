@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo base_url('index.php') ?>">
-            <img src="<?php echo base_url('assests/img/blood.png'); ?>" alt="" width="30" height="24">
+            <img src="<?php echo base_url('assests/img/blood.png'); ?>" alt="" width="80" height="30">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assests/styles/styles.css'); ?>">
     <title>Kegalle Blood Bank</title>
 </head>
@@ -208,13 +209,38 @@
                 </ul>
             </div>
         </div>
-
     </div>
-
-
 </section>
 
-<?php include_once 'footer/footer.php' ?>
+<!--The footer-->
+
+<section id="footer">
+    <img src="<?php echo base_url('assests/img/wave2.png'); ?>" class="footer-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-box">
+                <img src="<?php echo base_url('assests/img/blood.png'); ?>">
+                <p><i>To ensure the quality, safety, adequacy and cost effectiveness of the blood supply and related
+                        laboratory, clinical, academic and research services in accordance with national requirements
+                        and WHO recommendations.</i></p>
+            </div>
+            <div class="col-md-4 footer-box">
+
+            </div>
+            <div class="col-md-4 footer-box">
+                <p><b>Contact Us</b></p>
+                <p><i class="fas fa-map"></i> National Blood Center,</p>
+                <p>No. 555/5D, Elvitigala Mawatha,</p>
+                <p>Narahenpita,Colombo 05,</p>
+                <p>Sri Lanka.</p>
+                <p><i class="fas fa-phone"></i> +94117220677</p>
+                <p><i class="fas fa-envelope"></i> info@nbts.health.gov.lk</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

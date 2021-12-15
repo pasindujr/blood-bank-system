@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -130,4 +134,34 @@ body {
 
 .donation-process ul {
     margin-left: 20px;
+}
+
+/*----footer----*/
+
+#footer {
+    background-image: linear-gradient(to right, #A3333D, #F64740);
+    color: #ffffff;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.footer-box img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-box .fas {
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
 }
