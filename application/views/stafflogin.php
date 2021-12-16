@@ -17,9 +17,8 @@
 
 <div class="container mt-3">
 
-    <h2>Staff Login</h2>
-
-
+    <hr>
+    <h2 class="is-size-3">Staff Login</h2>
     <hr>
 
     <?php
@@ -31,7 +30,7 @@
 
     <?php echo form_open('Login/staffLogin'); ?>
 
-<!--    ---------------------------------------------------------------------------->
+    <!--    ---------------------------------------------------------------------------->
 
     <div class="container">
         <div class="row content">
@@ -39,7 +38,7 @@
                 <img src="<?php echo base_url('assests/img/team.png'); ?>" class="img-fluid">
             </div>
             <div class="col-md-6">
-                <h3 class="signin-text mb3">Log In</h3>
+                <h3 class="signin-text mb-3">Log In</h3>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Staff Username</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -54,7 +53,7 @@
         </div>
     </div>
 
-<!--    ---------------------------------------------------------------------------------->
+    <!--    ---------------------------------------------------------------------------------->
 
 
     <?php echo form_close(); ?>

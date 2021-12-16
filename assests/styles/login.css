@@ -9,7 +9,7 @@ body {
     margin: 8%;
     background-color: #fff;
     padding: 4rem 1rem 4rem 1rem;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .content img {
@@ -46,12 +46,12 @@ body {
     box-shadow: none;
 }
 
-.btn {
+.btn-class {
     border-color: #00ac96;
     color: #00ac96;
 }
 
-.btn:hover {
+.btn-class:hover {
     background-color: #00ac96;
     color: #fff;
 }
