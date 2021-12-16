@@ -30,9 +30,9 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
 
     <?php echo form_open('admin/updatestaff/' . $staff->StaffUserName); ?>
 
-    <div class="card m-5">
+    <div class="card m-5 shadow-lg">
         <div class="card-header">
-            Featured
+            Edit Staff Details
         </div>
         <div class="card-body">
             <div class="mb-3">
@@ -44,7 +44,8 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Staff Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - Pasindu Ruwandeniya"
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                       placeholder="eg - Pasindu Ruwandeniya"
                        name="staffname" value="<?php echo $staff->StaffName ?>">
             </div>
 
