@@ -24,7 +24,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 
     <?php
     if (validation_errors()) { ?>
-        <div class="alert alert-danger mt-5" role="alert">
+        <div class="alert alert-danger m-5" role="alert">
             <?php echo validation_errors(); ?>
         </div>
     <?php } ?>
@@ -33,7 +33,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 
 <!--    ------------------------->
 
-    <div class="card mt-5">
+    <div class="card m-5 shadow-lg">
         <h5 class="card-header">Register Donors</h5>
         <div class="card-body">
             <div class="mb-3">
