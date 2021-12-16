@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assests/styles/register.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assests/styles/form.css'); ?>">
     <title>Kegalle Blood Bank - Edit Donors</title>
 </head>
 <body>
@@ -31,9 +30,9 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
     <?php echo form_open('staff/updatedonor/' . $donor->DonorNIC); ?>
 
     <div class="card m-5 shadow-lg">
-        <div class="card-header">
+        <h5 class="card-header">
             Edit Donors
-        </div>
+        </h5>
         <div class="card-body">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Donor NIC</label>
