@@ -19,7 +19,13 @@
 
     <hr>
 
-    <?php echo validation_errors(); ?>
+    <?php
+    if (validation_errors()) { ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo validation_errors(); ?>
+        </div>
+    <?php } ?>
+
     <?php echo form_open('Login/adminLogin'); ?>
 
     <div class="mb-3">

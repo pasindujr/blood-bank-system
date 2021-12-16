@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assests/styles/login.css'); ?>">
 
     <title>Kegalle Blood Bank - Login</title>
 </head>
@@ -21,19 +22,41 @@
 
     <hr>
 
-    <?php echo validation_errors(); ?>
+    <?php
+    if (validation_errors()) { ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo validation_errors(); ?>
+        </div>
+    <?php } ?>
+
     <?php echo form_open('Login/staffLogin'); ?>
 
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Staff Username</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-               name="staffusername">
+<!--    ---------------------------------------------------------------------------->
+
+    <div class="container">
+        <div class="row content">
+            <div class="col-md-6 mb-3">
+                <img src="<?php echo base_url('assests/img/team.png'); ?>" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3 class="signin-text mb3">Log In</h3>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Staff Username</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           name="staffusername">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="staffpassword">
+                </div>
+                <button type="submit" class="btn btn-class">Login</button>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" name="staffpassword">
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
+
+<!--    ---------------------------------------------------------------------------------->
+
+
     <?php echo form_close(); ?>
 
 </div>
