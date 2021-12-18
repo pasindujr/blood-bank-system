@@ -21,6 +21,13 @@
                     <a class="nav-link active" aria-current="page"
                        href="<?php echo base_url('index.php/staff/viewpackets') ?>">View Donations</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"
+                       href="<?php echo base_url('index.php/insight') ?>">Insight</a>
+                </li>
+
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,6 +39,7 @@
                                 Out</a></li>
                     </ul>
                 </li>
+
         </div>
     </div>
 </nav>
