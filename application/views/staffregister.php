@@ -35,7 +35,8 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
         <div class="card-body">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Staff Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - Pasindu Ruwandeniya"
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                       placeholder="eg - Pasindu Ruwandeniya"
                        name="staffname">
             </div>
 
@@ -75,9 +76,8 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
 
 <?php include_once 'footer/footer.php' ?>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
 <?php if ($this->session->flashdata('staffsuccess')) { ?>
