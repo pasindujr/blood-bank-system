@@ -13,7 +13,7 @@ class Validate_Donors extends CI_Controller
         $this->form_validation->set_rules('donormobile', 'Donor Mobile', 'required|min_length[9]|max_length[9]');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('register_donors.php');
+            $this->load->view('register_donors');
         } else {
             $this->load->model('Donor_Model');
             $response = $this->Donor_Model->registerDonor();
