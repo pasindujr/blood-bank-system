@@ -86,5 +86,6 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
         alertify.set('notifier', 'position', 'top-right');
         alertify.success("<?php echo $this->session->flashdata('packetsaved'); ?>")
     </script>
+    <?php unset($_SESSION['packetsaved']); ?>
 <?php } ?>
 </html>

@@ -95,6 +95,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
         alertify.set('notifier', 'position', 'top-right');
         alertify.success("<?php echo $this->session->flashdata('donorupdated'); ?>")
     </script>
+    <?php unset($_SESSION['donorupdated']); ?>
 
 <?php } ?>
 

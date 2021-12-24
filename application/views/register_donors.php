@@ -119,6 +119,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
         alertify.set('notifier', 'position', 'top-right');
         alertify.success("<?php echo $this->session->flashdata('msg'); ?>")
     </script>
+    <?php unset($_SESSION['msg']); ?>
 
 <?php } ?>
 </html>

@@ -67,6 +67,7 @@
         alertify.set('notifier', 'position', 'top-right');
         alertify.warning("<?php echo $this->session->flashdata('erroradmin'); ?>")
     </script>
+    <?php unset($_SESSION['erroradmin']); ?>
 <?php } ?>
 
 

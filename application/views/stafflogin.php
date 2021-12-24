@@ -70,6 +70,7 @@
         alertify.set('notifier', 'position', 'top-right');
         alertify.warning("<?php echo $this->session->flashdata('errorstaff'); ?>")
     </script>
+    <?php unset($_SESSION['errorstaff']); ?>
 
 <?php } ?>
 

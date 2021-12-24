@@ -85,6 +85,7 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
         alertify.set('notifier', 'position', 'top-right');
         alertify.success("<?php echo $this->session->flashdata('staffsuccess'); ?>")
     </script>
+    <?php unset($_SESSION['staffsuccess']); ?>
 
 <?php } ?>
 </html>
