@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assests/styles/form.css'); ?>">
     <title>Kegalle Blood Bank - Login</title>
 </head>
@@ -30,14 +29,15 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 
     <?php echo form_open('Validate_Donors/register'); ?>
 
-<!--    ------------------------->
+    <!--    ------------------------->
 
     <div class="card m-5 shadow-lg">
         <h5 class="card-header">Register Donors</h5>
         <div class="card-body">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Donor Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg - Pasindu Ruwandeniya"
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                       placeholder="eg - Pasindu Ruwandeniya"
                        name="donorname">
             </div>
 
@@ -99,11 +99,10 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
                         <button type="submit" class="btn btn-primary"
                         ">Submit</button>
                     </div>
-        </div>
-    </div>
+                </div>
+            </div>
 
-<!--    ------------------------->
-
+            <!--    ------------------------->
 
 
             <?php echo form_close(); ?>
@@ -111,13 +110,31 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
             <?php include_once 'footer/footer.php' ?>
 </body>
 
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php if ($this->session->flashdata('msg')) { ?>
     <script>
-        alertify.set('notifier', 'position', 'top-right');
-        alertify.success("<?php echo $this->session->flashdata('msg'); ?>")
+
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            title: 'General Title',
+            animation: false,
+            position: 'top-right',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        toastMixin.fire({
+            title: '<?php echo $this->session->flashdata('msg'); ?>',
+            icon: 'success'
+        });
     </script>
     <?php unset($_SESSION['msg']); ?>
 

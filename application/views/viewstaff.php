@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assests/styles/table.css'); ?>">
     <title>Kegalle Blood Bank - View Donors</title>
@@ -64,15 +63,30 @@ if (!($this->session->userdata('isAdminLoggedIn'))) {
 
 <?php include_once 'footer/footer.php' ?>
 </body>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php if ($this->session->flashdata('staffupdated')) { ?>
     <script>
-        alertify.set('notifier', 'position', 'top-right');
-        alertify.success("<?php echo $this->session->flashdata('staffupdated'); ?>")
+
+        var toastMixin = Swal.mixin({
+            toast: true,
+            icon: 'success',
+            title: 'General Title',
+            animation: false,
+            position: 'top-right',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        toastMixin.fire({
+            title: '<?php echo $this->session->flashdata('staffupdated'); ?>',
+            icon: 'success'
+        });
     </script>
     <?php unset($_SESSION['staffupdated']); ?>
 <?php } ?>
