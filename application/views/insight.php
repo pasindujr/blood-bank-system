@@ -18,16 +18,15 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 }
 ?>
 
-
-<div class="container col-md-10">
-    <div class="row">
+<div class="container col-md-10" >
+    <div class="row" >
         <div class="col-md-12 text-center mt-5 mb-5">
             <h1>Insight</h1>
         </div>
-        <div class="row text-center mb-4">
-            <div class="col-md-6">
-                <div class="card border-info mx-sm-1 p-3 shadow-lg">
-                    <div class="card border-danger shadow text-danger p-3 my-card"><span class="fa fa-heart"
+        <div class="row text-center mb-4" >
+            <div class="col-md-6" >
+                <div class="card border-info mx-sm-1 p-3 shadow-lg cardBox">
+                    <div class="card border-danger shadow text-danger p-3 cardBox"><span class="fa fa-heart"
                                                                                          aria-hidden="true"></span>
                     </div>
                     <div class="text-danger text-center mt-3"><h4>Total Donors</h4></div>
@@ -36,8 +35,8 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card border-success mx-sm-1 p-3 shadow-lg">
-                    <div class="card border-success shadow text-success p-3 my-card"><span class="fa fa-eye"
+                <div class="card border-success mx-sm-1 p-3 shadow-lg cardBox">
+                    <div class="card border-success shadow text-success p-3 cardBox"><span class="fa fa-eye"
                                                                                            aria-hidden="true"></span>
                     </div>
                     <div class="text-success text-center mt-3"><h4>Total Available Packets</h4></div>
@@ -49,8 +48,8 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 </div>
 
 
-<div class=" col-md-10 offset-md-1 mb-5">
-    <div class="card border-info mx-sm-1 p-3 shadow-lg">
+<div class=" col-md-10 offset-md-1 mb-5 ">
+    <div class="card border-info mx-sm-1 p-3 shadow-lg cardBox">
 
         <div class="text-danger text-center mt-3"><h4># of packets available</h4></div>
         <div class="text-danger text-center mt-2">
@@ -65,7 +64,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 </div>
 
 <div class=" col-md-8 offset-md-2">
-    <div class="card border-info mx-sm-1 p-3 shadow-lg">
+    <div class="card border-info mx-sm-1 p-3 shadow-lg cardBox">
 
         <div class="text-danger text-center mt-3"><h4># of donors</h4></div>
         <div class="text-danger text-center mt-2">
