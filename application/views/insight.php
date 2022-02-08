@@ -76,7 +76,12 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
         </div>
 
     </div>
+
+    <div>
+        <a href="<?php echo base_url('index.php/generatepdf') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" target="_blank">Report</a>
+    </div>
 </div>
+
 
 
 <?php include_once 'footer/footer.php' ?>

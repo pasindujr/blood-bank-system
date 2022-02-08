@@ -22,7 +22,7 @@
                 <a href="#"><img src="<?php echo base_url('assests/img/play.png'); ?>" class="play-btn">Watch Video</a>
             </div>
             <div class="col-md-6 text-center">
-                <img src="<?php echo base_url('assests/img/banner.jpg'); ?>" class="img-fluid">
+                <img src="<?php echo base_url('assests/img/banner.jpg'); ?>" class="img-fluid banner-img">
             </div>
         </div>
     </div>

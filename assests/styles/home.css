@@ -48,6 +48,10 @@ body {
     text-decoration: none;
 }
 
+.banner-img {
+    border-radius: 20px;
+}
+
 .bottom-img {
     width: 100%;
 }
