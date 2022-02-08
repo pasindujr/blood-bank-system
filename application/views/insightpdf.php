@@ -12,11 +12,13 @@
 <style>
     table, th, td {
         border: 1px solid;
-        padding: 20px;
+        padding: 5px 10px 5px 10px;
     }
 </style>
 
-<table style="width:60%;">
+<h1 style="color: #e33737">Report</h1>
+
+<table style="width:60%; margin-bottom: 20px">
     <tr>
         <th>Total Donors</th>
         <th>Total Available Packets</th>
@@ -30,33 +32,34 @@
 </table>
 
 
-<?php echo isset($genderChartData['genderLabel']) ? json_encode($packetChartData['packetLabel']) : '[]'; ?>
-<!--output = ["A+","AB+","AB-","B+","B-","O+","O-"]-->
-<br>
-
-<?php echo isset($genderChartData['genderLabel']) ? json_encode($packetChartData['packetData']) : '[]'; ?>
-<!--output = ["5","2","2","2","6","1","2"]-->
-<br>
-
-<?php  echo json_encode($packetChartData['packetLabel'][1]); ?>
-<!--output = "AB+"-->
-
-<br>
-
-<?php echo json_encode($packetChartData['packetData'][1]); ?>
-<!--output = "2"-->
-
+<table>
+    <tr>
+        <th>Blood Type</th>
+        <th>Packet Count</th>
+    </tr>
+    <?php for ($i=0; $i<=count($packetChartData['packetData'])-1; $i++) { ?>
+        <tr>
+            <th><?php print_r($packetChartData['packetLabel'][$i]) ?></th>
+            <th><?php print_r($packetChartData['packetData'][$i]) ?></th>
+        </tr>
+    <?php } ?>
+</table>
 
 <br>
 
-<br>
 
-<?php echo isset($genderChartData['genderLabel']) ? json_encode($genderChartData['genderLabel']) : '[]'; ?>
-
-<br>
-
-<?php echo isset($genderChartData['genderLabel']) ? json_encode($genderChartData['genderData']) : '[]'; ?>
-
+<table>
+    <tr>
+        <th>Blood Type</th>
+        <th>Packet Count</th>
+    </tr>
+    <?php for ($i=0; $i<=count($genderChartData['genderLabel'])-1; $i++) { ?>
+        <tr>
+            <th><?php print_r($genderChartData['genderLabel'][$i]) ?></th>
+            <th><?php print_r($genderChartData['genderData'][$i]) ?></th>
+        </tr>
+    <?php } ?>
+</table>
 
 </body>
 </html>
