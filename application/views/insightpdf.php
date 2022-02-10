@@ -37,7 +37,7 @@
         <th>Blood Type</th>
         <th>Packet Count</th>
     </tr>
-    <?php for ($i=0; $i<=count($packetChartData['packetData'])-1; $i++) { ?>
+    <?php for ($i = 0; $i <= count($packetChartData['packetData']) - 1; $i++) { ?>
         <tr>
             <th><?php print_r($packetChartData['packetLabel'][$i]) ?></th>
             <th><?php print_r($packetChartData['packetData'][$i]) ?></th>
@@ -53,7 +53,7 @@
         <th>Blood Type</th>
         <th>Packet Count</th>
     </tr>
-    <?php for ($i=0; $i<=count($genderChartData['genderLabel'])-1; $i++) { ?>
+    <?php for ($i = 0; $i <= count($genderChartData['genderLabel']) - 1; $i++) { ?>
         <tr>
             <th><?php print_r($genderChartData['genderLabel'][$i]) ?></th>
             <th><?php print_r($genderChartData['genderData'][$i]) ?></th>

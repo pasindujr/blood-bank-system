@@ -40,4 +40,10 @@ class Staff_Model extends CI_Model
     {
         return $this->db->delete('staff', ['StaffUserName' => $staff]);
     }
+
+    function getStaff($staff)
+    {
+        $query = $this->db->get_where('staff', array('StaffUserName' => $staff));
+        return $query->row();
+    }
 }

@@ -34,7 +34,9 @@
                         Hello <?php echo $_SESSION['staffUserName'] ?>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><a class="dropdown-item"
+                               href="<?php echo base_url('index.php/staff/getaccount/' . $_SESSION['staffUserName']); ?>">Account</a>
+                        </li>
                         <li><a class="dropdown-item" href="<?php echo base_url('index.php/staff/stafflogout'); ?>">Log
                                 Out</a></li>
                     </ul>

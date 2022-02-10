@@ -149,4 +149,40 @@ class Staff extends CI_Controller
             $this->session->set_flashdata('donationerror', 'Something went wrong!');
         }
     }
+
+    public function getAccount($staff)
+    {
+        $this->load->model('Staff_Model');
+        $data['staff'] = $this->Staff_Model->getStaff($staff);
+        $this->load->view('editstaffaccount', $data);
+    }
+
+    public function updateAccount($staff)
+    {
+
+        $this->form_validation->set_rules('staffname', 'Staff Name', 'required');
+        $this->form_validation->set_rules('staffusername', 'Staff Username');
+        $this->form_validation->set_rules('staffdesignation', 'Staff Designation', 'required');
+        $this->form_validation->set_rules('staffnic', 'NIC', 'required');
+
+        if ($this->form_validation->run()) {
+            $data = [
+
+                'StaffName' => $this->input->post('staffname'),
+                'StaffUserName' => $this->input->post('staffusername'),
+                'StaffDesignation' => $this->input->post('staffdesignation'),
+                'StaffNIC' => $this->input->post('staffnic'),
+
+            ];
+            $this->load->Model('Staff_Model');
+            $data['staff'] = $this->Staff_Model->updateStaff($data, $staff);
+            $this->session->set_flashdata('staffupdated', 'Staff detailed updated successfully!');
+            redirect(base_url('index.php/staff/getaccount/' . $staff));
+        } else {
+            $this->getAccount($staff);
+        }
+
+    }
+
+
 }
