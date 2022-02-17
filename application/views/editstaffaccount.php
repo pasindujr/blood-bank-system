@@ -72,10 +72,15 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
     </div>
 
 <?php } else { ?>
-    <div class="no-permission">
-        <h3 style="color: wheat">You don't have permission to do that function so... </h3>
+    <div class="no-permission" style="display:flex; flex-direction: column;">
+        <div>
+            <h3 style="color: wheat; float: left">You don't have permission to do that function so... </h3>
+        </div>
+        <br>
+        <div>
+            <img src="<?php echo base_url('assests/img/gtfo.jpg'); ?>" height="300px" width="300px">
+        </div>
 
-        <img src="<?php echo base_url('assests/img/gtfo.jpg'); ?>" height="300px" width="300px">
     </div>
 <?php } ?>
 
