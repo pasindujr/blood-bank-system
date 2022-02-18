@@ -18,13 +18,22 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 }
 ?>
 
-<div class="container col-md-10" >
-    <div class="row" >
+<div class="container col-md-10">
+    <div class="row">
         <div class="col-md-12 text-center mt-5 mb-5">
+            <hr>
             <h1>Insight</h1>
+            <hr>
         </div>
-        <div class="row text-center mb-4" >
-            <div class="col-md-6" >
+
+        <div style="text-align: center; padding-bottom: 30px">
+            <a href="<?php echo base_url('index.php/generatepdf') ?>" class="btn btn-primary btn-lg active"
+               role="button" aria-pressed="true" target="_blank">Report</a>
+        </div>
+
+
+        <div class="row text-center mb-4">
+            <div class="col-md-6">
                 <div class="card border-info mx-sm-1 p-3 shadow-lg cardBox">
                     <div class="card border-danger shadow text-danger p-3 cardBox"><span class="fa fa-heart"
                                                                                          aria-hidden="true"></span>
@@ -77,11 +86,7 @@ if (!($this->session->userdata('isStaffLoggedIn'))) {
 
     </div>
 
-    <div>
-        <a href="<?php echo base_url('index.php/generatepdf') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" target="_blank">Report</a>
-    </div>
 </div>
-
 
 
 <?php include_once 'footer/footer.php' ?>
